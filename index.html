@@ -29,10 +29,154 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+      <h2>Scheduler</h2>
+      <table id="eventTable">
+        <tr>
+          <th>Hour</th>
+          <th>Activity</th>
+          <th>Save to local storage</th>
+        </tr>
+        <tr>
+          <td>12AM</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton1">Save Activity</button></td>
+        </tr>
+        <tr>
+          <td>1AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>2AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>3AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>4AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>5AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>6AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>7AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>8AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>9AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>10AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>11AM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>12PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>1PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>2PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>3PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>4PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>5PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>6PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>7PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>8PM</td>
+          <td> <textarea></textarea> </td>
+          <td>S</td>
+        </tr>
+        <tr>
+          <td>9PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>10PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+        <tr>
+          <td>11PM</td>
+          <td> <textarea></textarea> </td>
+          <td>SAVE ICON</td>
+        </tr>
+      </table>
+      
       <!-- Timeblocks go here -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // add event listener for clicking activity cells 
+        $("#saveButton1").on("click", function(){
+        var text = $(this).parent().siblings(".textArea").children("textarea").val()
+        console.log(text)
+        })
+        // add code to allow text to be entered into activity cells 
+        // encode time as value in the row, get time now
+        // update image for the third column to be a save icon 
+        // add event when i click the save icon text in middle column is saved to local storage 
+        // keep events saved when page is refreshed 
+        
+      })
+    </script>
   </body>
 </html>
