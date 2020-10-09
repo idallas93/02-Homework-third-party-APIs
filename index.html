@@ -37,124 +37,49 @@
           <th>Save to local storage</th>
         </tr>
         <tr>
-          <td>12AM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton1">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>1AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>2AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>3AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>4AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>5AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>6AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>7AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>8AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
           <td>9AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton1" class="btn btn-primary text" value="1">Save Activity</button></td>
         </tr>
         <tr>
           <td>10AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton2" class="btn btn-primary text" value="2">Save Activity</button></td>
         </tr>
         <tr>
           <td>11AM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton3" class="btn btn-primary text" value="3">Save Activity</button></td>
         </tr>
         <tr>
           <td>12PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton4" class="btn btn-primary text" value="4">Save Activity</button></td>
         </tr>
         <tr>
           <td>1PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton5" class="btn btn-primary text" value="5">Save Activity</button></td>
         </tr>
         <tr>
           <td>2PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton6" class="btn btn-primary text" value="6">Save Activity</button></td>
         </tr>
         <tr>
           <td>3PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton7" class="btn btn-primary text" value="7">Save Activity</button></td>
         </tr>
         <tr>
           <td>4PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton8" class="btn btn-primary text" value="8">Save Activity</button></td>
         </tr>
         <tr>
           <td>5PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>6PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>7PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>8PM</td>
-          <td> <textarea></textarea> </td>
-          <td>S</td>
-        </tr>
-        <tr>
-          <td>9PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>10PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
-        </tr>
-        <tr>
-          <td>11PM</td>
-          <td> <textarea></textarea> </td>
-          <td>SAVE ICON</td>
+          <td class="textArea"> <textarea></textarea> </td>
+          <td><button id="saveButton9" class="btn btn-primary text" value="9">Save Activity</button></td>
         </tr>
       </table>
       
@@ -165,20 +90,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script>
       $(document).ready(function(){
-        // add event listener for clicking activity cells 
-        $("#saveButton1").on("click", function(){
-        var text = $(this).parent().siblings(".textArea").children("textarea").val()
-        console.log(text)
-        // make button genera
-        // save text to local storage 
+          
+var events;
+
+// Fill in events from local storage
+function renderEvents() {
+  // check if events have been already set
+  if (localStorage.getItem("events") !== null) {
+    // iterate over event descriptions
+    // obtain events
+    events = JSON.parse(localStorage.getItem("events"));
+    // iterate over textareas
+    $("textarea").each(function (index, element) {
+      // assign events with their descriptions
+      $(this).val(events[index + 1]);
+    });
+  } else {
+    // if events haven't been set yet, set them to empty strings
+    events = {};
+    // iterate over keys
+    for (let i = 1; i <= 9; i++) {
+      // add keys
+      events[i] = "";
+    }
+    // log into localStorage
+    localStorage.setItem("events", JSON.stringify(events));
+  }
+}
         // 
+        $(".text").on("click", function(event){
+        var text = $(this).parent().siblings(".textArea").children("textarea").val()
+        var index = $(this).attr("value");
+        events[index] = event;
+        localStorage.setItem("events", JSON.stringify(events));
+        console.log(event)
         })
-        // add code to allow text to be entered into activity cells 
-        // encode time as value in the row, get time now
-        // update image for the third column to be a save icon 
-        // add event when i click the save icon text in middle column is saved to local storage 
-        // keep events saved when page is refreshed 
-        
       })
     </script>
   </body>
