@@ -22,9 +22,9 @@ Pressing the blue save icon saves your response to local storage.
 ### Overview of planner image
 ![OverviewImagine](./Assets/overviewImage.png)
 ### Planner with inputs 
-![OverviewImagine](./Assets/Imagewithinputs.png)
+![Image with inputs](./Assets/imagewithinputs.png)
 ### Local storage example
-![OverviewImagine](./Assets/LocalStorageImage.png)
+![Local storage example](./Assets/LocalStorageImage.png)
 
 
 
