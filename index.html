@@ -29,69 +29,106 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <h2>Scheduler</h2>
-      <table id="eventTable">
-        <tr>
-          <th>Hour</th>
-          <th>Activity</th>
-          <th>Save to local storage</th>
-        </tr>
-        <tr>
-          <td>9AM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton1" class="btn btn-primary text" value="1">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>10AM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton2" class="btn btn-primary text" value="2">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>11AM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton3" class="btn btn-primary text" value="3">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>12PM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton4" class="btn btn-primary text" value="4">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>1PM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton5" class="btn btn-primary text" value="5">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>2PM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton6" class="btn btn-primary text" value="6">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>3PM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton7" class="btn btn-primary text" value="7">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>4PM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton8" class="btn btn-primary text" value="8">Save Activity</button></td>
-        </tr>
-        <tr>
-          <td>5PM</td>
-          <td class="textArea"> <textarea></textarea> </td>
-          <td><button id="saveButton9" class="btn btn-primary text" value="9">Save Activity</button></td>
-        </tr>
-      </table>
-      
       <!-- Timeblocks go here -->
+      <div class="row time-block">
+        <div class="col-1 hour">9AM</div>
+        <textarea id="9" class="col-10"></textarea>
+        <button id="1" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">10AM</div>
+        <textarea id="10" class="col-10"></textarea>
+        <button id="2" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">11AM</div>
+        <textarea id="11" class="col-10"></textarea>
+        <button id="3" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">12PM</div>
+        <textarea id="12" class="col-10"></textarea>
+        <button id="4" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">1PM</div>
+        <textarea id="13" class="col-10"></textarea>
+        <button id="5" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">2PM</div>
+        <textarea id="14" class="col-10"></textarea>
+        <button id="6" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">3PM</div>
+        <textarea id="15" class="col-10"></textarea>
+        <button id="7" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">4PM</div>
+        <textarea id="16" class="col-10"></textarea>
+        <button id="8" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">5PM</div>
+        <textarea id="17" class="col-10"></textarea>
+        <button id="9" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">6PM</div>
+        <textarea id="18" class="col-10"></textarea>
+        <button id="10" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">7PM</div>
+        <textarea id="19" class="col-10"></textarea>
+        <button id="11" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">8PM</div>
+        <textarea id="20" class="col-10"></textarea>
+        <button id="12" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+      <div class="row time-block">
+        <div class="col-1 hour">9PM</div>
+        <textarea id="21" class="col-10"></textarea>
+        <button id="13" class="col-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script>
-      $(document).ready(function(){
-          
-var events;
+     var events;
 
 // Fill in events from local storage
 function renderEvents() {
@@ -109,7 +146,7 @@ function renderEvents() {
     // if events haven't been set yet, set them to empty strings
     events = {};
     // iterate over keys
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 13; i++) {
       // add keys
       events[i] = "";
     }
@@ -117,15 +154,54 @@ function renderEvents() {
     localStorage.setItem("events", JSON.stringify(events));
   }
 }
-        // 
-        $(".text").on("click", function(event){
-        var text = $(this).parent().siblings(".textArea").children("textarea").val()
-        var index = $(this).attr("value");
-        events[index] = event;
-        localStorage.setItem("events", JSON.stringify(events));
-        console.log(event)
-        })
-      })
+
+// render the color of the blocks 
+function renderBlockColors() {
+// get hour 
+  var hour = moment().hour();
+  // assign textareas with proper color according to current time
+  $("textarea").each(function (index, element) {
+    // Obtain time associated with block
+    var time = parseInt($(this).attr("id"));
+    // check if time is before, similar, or after current hour of day
+    if (time < hour) {
+      // assign class of past
+      $(this).addClass("past");
+    } else if (time === hour) {
+      // assign class of present
+      $(this).addClass("present");
+    } else {
+      // assign class of future
+      $(this).addClass("future");
+    }
+  });
+}
+
+// when save button is clicked
+$(".saveBtn").click(function (event) {
+  event.preventDefault();
+  // obtain event to save
+  var event = $(this).prev().val();
+  // obtain index
+  var index = $(this).attr("id");
+  // change event in global events variable
+  events[index] = event;
+  // update events in localStorage
+  localStorage.setItem("events", JSON.stringify(events));
+});
+
+function displayDay() {
+  // obtain date
+  var date = Date().substring(0, 15);
+  // display
+  $("#currentDay").text(date);
+}
+
+$(document).ready(function () {
+  displayDay();
+  renderEvents();
+  renderBlockColors();
+});
     </script>
   </body>
 </html>
